@@ -27,8 +27,8 @@ void main() {
   for (var element in pacientes) {
     var listaPacientes = element.split('|');
     //print(listaPacientes);
-    var idade = int.parse(listaPacientes[1]);
-    if (idade> 20) {
+    var idade = int.tryParse(listaPacientes[1] ) ?? 0;
+    if (idade > 20) {
       print(listaPacientes[0]);
     }
     var pacientesPorProfissao = listaPacientes[2];
